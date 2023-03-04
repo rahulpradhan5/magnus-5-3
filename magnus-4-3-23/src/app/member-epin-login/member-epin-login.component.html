@@ -1,0 +1,118 @@
+<div class="wrapper-pro">
+    <div class="left-sidebar-pro">
+        <app-side-menu></app-side-menu>
+    </div>
+
+    <div class="content-inner-all">
+        <div class="admin-dashone-data-table-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+
+                        <link href="/content/treeview/mytreestyle.css" rel="stylesheet">
+                        <link href="/Administration/Content/SocialStyle.css" rel="stylesheet">
+                        <style>
+                            @media all and (min-width: 320px) and (max-width:480px) {
+                                #GoogleAuth {
+                                    margin-left: 0% !important;
+                                }
+
+                                #FacebookAuth {
+                                    margin-left: 0% !important;
+                                }
+                            }
+
+                            @media all and (min-width: 481px) and (max-width:780px) {
+                                #FacebookAuth {
+                                    margin-top: 1%;
+                                }
+                            }
+
+                            .loginBtn {
+                                padding: 0px 16px 3px 46px !important;
+                                line-height: 32px !important;
+                                font-size: 14px !important;
+                            }
+                        </style>
+
+                        <br>
+                        <form action="/Epin/MemberEpinLogin" method="post"><input name="__RequestVerificationToken"
+                                type="hidden"
+                                value="N1tv1uG6szeOasfe-FKgx4tHb-FCDzmFHCAgx-P6WVX6Yzcq-0uMBLDmtqhkmsD8YnrxGDPAHApnhRhqeqXSbryrer71rHB-5xo3zUlw_pQ1">
+                            <div class="sparkline16-list shadow-reset">
+                                <div class="sparkline16-hd">
+                                    <div class="main-sparkline16-hd">
+                                        <h1>E-Pin Login</h1>
+                                    </div>
+                                </div>
+                                <div class="sparkline16-graph">
+                                    <div class="datatable-dashv1-list custom-datatable-overright">
+
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="all-form-element-inner">
+
+                                                    <br>
+                                                    <div class="result" style="text-align:center;">
+
+                                                    </div>
+
+
+                                                    <div id="errorMessage1" class="message-error"
+                                                        style="display: none;"></div>
+                                                    <div class="form-group-inner">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <label for="EnterPassword">Enter Password</label>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <input class="form-control" id="txtNewPassword"
+                                                                    name="txtNewPassword" type="password">
+                                                                <span class="field-validation-valid"
+                                                                    data-valmsg-for="txtNewPassword"
+                                                                    data-valmsg-replace="true"></span>
+                                                            </div>
+                                                            <div class="col-md-1" id="requiedAttricSymbol">
+                                                                <span class="required">*</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="login-horizental cancel-wp align-middle">
+                                                        <button type="submit" id="Login" name="Login"
+                                                            class="btn btn-custon-four btn-primary"><i
+                                                                class="fa fa-lock"></i>
+                                                            Login</button>
+                                                        <button type="submit" id="ForgetPassword" name="ForgetPassword"
+                                                            class="btn btn-custon-four btn-danger"><i
+                                                                class="fa fa-question-circle"></i> Forgot
+                                                            password</button>
+
+
+
+                                                        <button type="submit" id="GoogleAuth" name="GoogleAuth"
+                                                            class="loginBtn loginBtn--google">
+                                                            Sign in with Google
+                                                        </button>
+                                                        <button type="submit" id="FacebookAuth" name="FacebookAuth"
+                                                            class="loginBtn loginBtn--facebook">
+                                                            Sign in with Facebook
+                                                        </button>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
