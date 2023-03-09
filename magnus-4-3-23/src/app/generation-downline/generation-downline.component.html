@@ -400,10 +400,10 @@
                                                                 </tr>
                                                             </thead>
                                                             <tbody style="user-select: text;">
-                                                                <tr role="row" class="odd" style="user-select: text;">
+                                                                <tr role="row" class="odd" style="user-select: text;" *ngFor="let data of generation">
                                                                     <td data-label="
                     ID
-                " class="sorting_1" style="user-select: text;">MCS462713</td>
+                " class="sorting_1" style="user-select: text;">{{data.user_id}}</td>
                                                                     <td data-label="
                     Name
                 " style="user-select: text;">VISHNU NAIK</td>
@@ -418,195 +418,13 @@
                 " style="user-select: text;">Paid</td>
                                                                     <td data-label="
                     DOJ
-                " style="user-select: text;">17/07/2021</td>
+                " style="user-select: text;">{{data.created_at}}</td>
                                                                     <td data-label="
                     Level
-                " style="user-select: text;">2</td>
+                " style="user-select: text;">{{data.level}}</td>
                                                                     <td data-label="
                     Sponsor ID
-                " style="user-select: text;">MCS342131</td>
-                                                                </tr>
-                                                                <tr role="row" class="even" style="user-select: text;">
-                                                                    <td data-label="
-                    ID
-                " class="sorting_1" style="user-select: text;">MCS342131</td>
-                                                                    <td data-label="
-                    Name
-                " style="user-select: text;">Rajesh Karekar</td>
-                                                                    <td data-label="
-                    Joining Package
-                " style="user-select: text;">Free Package ( 0.00 )</td>
-                                                                    <td data-label="
-                    Current Package
-                " style="user-select: text;">Welcome Package( 8850.00 )</td>
-                                                                    <td data-label="
-                    Status
-                " style="user-select: text;">Paid</td>
-                                                                    <td data-label="
-                    DOJ
-                " style="user-select: text;">23/04/2021</td>
-                                                                    <td data-label="
-                    Level
-                " style="user-select: text;">1</td>
-                                                                    <td data-label="
-                    Sponsor ID
-                " style="user-select: text;">MCS000018</td>
-                                                                </tr>
-                                                                <tr role="row" class="odd" style="user-select: text;">
-                                                                    <td data-label="
-                    ID
-                " class="sorting_1" style="user-select: text;">MCS002594</td>
-                                                                    <td data-label="
-                    Name
-                " style="user-select: text;">Jyotiraditya Bhagat</td>
-                                                                    <td data-label="
-                    Joining Package
-                " style="user-select: text;">Free Package ( 0.00 )</td>
-                                                                    <td data-label="
-                    Current Package
-                " style="user-select: text;">Welcome Package( 8850.00 )</td>
-                                                                    <td data-label="
-                    Status
-                " style="user-select: text;">Paid</td>
-                                                                    <td data-label="
-                    DOJ
-                " style="user-select: text;">31/03/2021</td>
-                                                                    <td data-label="
-                    Level
-                " style="user-select: text;">1</td>
-                                                                    <td data-label="
-                    Sponsor ID
-                " style="user-select: text;">MCS000018</td>
-                                                                </tr>
-                                                                <tr role="row" class="even" style="user-select: text;">
-                                                                    <td data-label="
-                    ID
-                " class="sorting_1" style="user-select: text;">MCS212793</td>
-                                                                    <td data-label="
-                    Name
-                " style="user-select: text;">SHABODDIN SHAIKH</td>
-                                                                    <td data-label="
-                    Joining Package
-                " style="user-select: text;">Free Package ( 0.00 )</td>
-                                                                    <td data-label="
-                    Current Package
-                " style="user-select: text;">Free Package ( 0.00 )</td>
-                                                                    <td data-label="
-                    Status
-                " style="user-select: text;">Unpaid</td>
-                                                                    <td data-label="
-                    DOJ
-                " style="user-select: text;">18/03/2021</td>
-                                                                    <td data-label="
-                    Level
-                " style="user-select: text;">2</td>
-                                                                    <td data-label="
-                    Sponsor ID
-                " style="user-select: text;">MCS219222</td>
-                                                                </tr>
-                                                                <tr role="row" class="odd" style="user-select: text;">
-                                                                    <td data-label="
-                    ID
-                " class="sorting_1" style="user-select: text;">MCS642966</td>
-                                                                    <td data-label="
-                    Name
-                " style="user-select: text;">HANUMANT KALUCHE</td>
-                                                                    <td data-label="
-                    Joining Package
-                " style="user-select: text;">Free Package ( 0.00 )</td>
-                                                                    <td data-label="
-                    Current Package
-                " style="user-select: text;">Free Package ( 0.00 )</td>
-                                                                    <td data-label="
-                    Status
-                " style="user-select: text;">Unpaid</td>
-                                                                    <td data-label="
-                    DOJ
-                " style="user-select: text;">15/03/2021</td>
-                                                                    <td data-label="
-                    Level
-                " style="user-select: text;">1</td>
-                                                                    <td data-label="
-                    Sponsor ID
-                " style="user-select: text;">MCS000018</td>
-                                                                </tr>
-                                                                <tr role="row" class="even" style="user-select: text;">
-                                                                    <td data-label="
-                    ID
-                " class="sorting_1" style="user-select: text;">MCS281180</td>
-                                                                    <td data-label="
-                    Name
-                " style="user-select: text;">Sanket Naik</td>
-                                                                    <td data-label="
-                    Joining Package
-                " style="user-select: text;">Free Package ( 0.00 )</td>
-                                                                    <td data-label="
-                    Current Package
-                " style="user-select: text;">Welcome Package( 8850.00 )</td>
-                                                                    <td data-label="
-                    Status
-                " style="user-select: text;">Paid</td>
-                                                                    <td data-label="
-                    DOJ
-                " style="user-select: text;">09/02/2021</td>
-                                                                    <td data-label="
-                    Level
-                " style="user-select: text;">1</td>
-                                                                    <td data-label="
-                    Sponsor ID
-                " style="user-select: text;">MCS000018</td>
-                                                                </tr>
-                                                                <tr role="row" class="odd" style="user-select: text;">
-                                                                    <td data-label="
-                    ID
-                " class="sorting_1" style="user-select: text;">MCS219222</td>
-                                                                    <td data-label="
-                    Name
-                " style="user-select: text;">Firoz Nazir Gumgol</td>
-                                                                    <td data-label="
-                    Joining Package
-                " style="user-select: text;">Free Package ( 0.00 )</td>
-                                                                    <td data-label="
-                    Current Package
-                " style="user-select: text;">Welcome Package( 8850.00 )</td>
-                                                                    <td data-label="
-                    Status
-                " style="user-select: text;">Paid</td>
-                                                                    <td data-label="
-                    DOJ
-                " style="user-select: text;">31/01/2021</td>
-                                                                    <td data-label="
-                    Level
-                " style="user-select: text;">1</td>
-                                                                    <td data-label="
-                    Sponsor ID
-                " style="user-select: text;">MCS000018</td>
-                                                                </tr>
-                                                                <tr role="row" class="even" style="user-select: text;">
-                                                                    <td data-label="
-                    ID
-                " class="sorting_1" style="user-select: text;">MCS439697</td>
-                                                                    <td data-label="
-                    Name
-                " style="user-select: text;">Firoz Gumgol</td>
-                                                                    <td data-label="
-                    Joining Package
-                " style="user-select: text;">Free Package ( 0.00 )</td>
-                                                                    <td data-label="
-                    Current Package
-                " style="user-select: text;">Free Package ( 0.00 )</td>
-                                                                    <td data-label="
-                    Status
-                " style="user-select: text;">Unpaid</td>
-                                                                    <td data-label="
-                    DOJ
-                " style="user-select: text;">28/01/2021</td>
-                                                                    <td data-label="
-                    Level
-                " style="user-select: text;">1</td>
-                                                                    <td data-label="
-                    Sponsor ID
-                " style="user-select: text;">MCS000018</td>
+                " style="user-select: text;">{{data.owner}}</td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>

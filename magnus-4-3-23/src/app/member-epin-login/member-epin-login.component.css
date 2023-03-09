@@ -1,3 +1,74 @@
+.loader {
+    height: 80px;
+    width: 80px;
+    padding: 15px;
+    /* background-image: url('../Content/Images/Loader.gif'); */
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 45%;
+    top: 50%;
+}
+
+.view-file-in {
+    height: 65px;
+    padding: 2px 0px;
+}
+
+/* a:hover {
+    text-decoration: none;
+} */
+
+a[_ngcontent-itr-c57]:hover {
+    text-decoration: none !important;
+}
+
+
+
+.table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+
+.stausImg {
+    width: 25px;
+    height: 25px;
+}
+
+#MyrecentJoining_filter {
+    display: none;
+}
+
+.jqstooltip {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    visibility: hidden;
+    background: rgb(0, 0, 0) transparent;
+    background-color: rgba(0, 0, 0, 0.6);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+    color: white;
+    font: 10px arial, san serif;
+    text-align: left;
+    white-space: nowrap;
+    padding: 5px;
+    border: 1px solid white;
+    z-index: 10000;
+}
+
+.jqsfield {
+    color: white;
+    font: 10px arial, san serif;
+    text-align: left;
+}
+
+
+
+
+/* ///welgenesis */
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -21329,7 +21400,7 @@ ul.comment-action-st li a {
 }
 
 .dashone-comment.dashtwo-comment {
-    height: 355px;
+    height: 300px;
 }
 
 .dashtwo-messages .dashtwo-messsage-title {
@@ -37312,7 +37383,17 @@ button.close {
     content: "\f295"
 }
 
-@media screen and (min-width: 991px){
+
+@media screen and (max-width:991px) {
     .content-inner-all {
-        margin-top: -13vh !important;
-    }}
+        margin-left: 0;
+        transition: all 0.3s;
+    }
+}
+.btn {
+    background: #CE992F;
+    /* border-radius: 0px 30px 30px 20px; */
+    /* margin-left: 36%; */
+    width: 427px;
+    height: 62px;
+}
