@@ -39,8 +39,13 @@ export class CheckEpinComponent implements OnInit {
     }
     this.http.get('http://moneysagaconsultancy.com/api/api/getEpin?user_id='+this.uid)
     .subscribe((data:any) => {
-      this.mpin = data.data[0]['epin'];
-      if(this.mpin == 'undefined'){
+      if (data?.data?.[0]?.['epin']) {
+        this.mpin = data.data[0]['epin'];
+      } else {
+        this.mpin = undefined;
+      }
+      
+      if(this.mpin == undefined){
         const docRef = this.firestore.collection('users').doc(this.uid);
         docRef.get().subscribe((doc: any) => {
           if (doc.exists) {
@@ -57,7 +62,7 @@ export class CheckEpinComponent implements OnInit {
               })
               .catch(error => {
                 // password is incorrect or user doesn't exist
-                console.log('not same')
+               alert('password not same')
               });
           }
         });
