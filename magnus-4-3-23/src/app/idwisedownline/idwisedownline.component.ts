@@ -10,12 +10,15 @@ export class IdwisedownlineComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
   apiResponse: any;
+  row:any;
   data:any;
   ngOnInit(): void {
-    this.http.get<any>('http://moneysagaconsultancy.com/api/api/totaluserdata?user_id=ab00003').subscribe(response => {
+    const uid = sessionStorage.getItem('firebaseUserId');
+    this.http.get<any>('http://moneysagaconsultancy.com/api/api/totaluserdata?user_id='+uid).subscribe(response => {
         this.apiResponse = response;
-     this.data = this.apiResponse.total_details.leftdata.concat(this.apiResponse.total_details.rightdata);
-    
+     this.row = this.apiResponse.total_details.leftdata.concat(this.apiResponse.total_details.rightdata).reverse();
+     this.data= this.row.sort((a:any, b:any) => a.id.localeCompare(b.id));
+
     });
 }
 
