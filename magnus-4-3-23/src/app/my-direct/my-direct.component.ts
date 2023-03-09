@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { collection } from '@firebase/firestore';
 
 @Component({
   selector: 'app-my-direct',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyDirectComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private http: HttpClient) { }
+  apiresponse:any;
+  leftdata:any;
+  rightdata:any;
   ngOnInit(): void {
+     const uid = sessionStorage.getItem('firebaseUserId');
+     this.http.get('https://moneysagaconsultancy.com/api/api/totaluserdata?user_id='+uid)
+      .subscribe((datas:any) => {
+        this.apiresponse=datas;
+        this.leftdata=datas.total_details.leftdata;
+        this.rightdata=datas.total_details.rightdata;
+        console.log(this.apiresponse);
+      });
   }
+
 
 }

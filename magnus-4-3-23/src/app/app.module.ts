@@ -79,6 +79,7 @@ import { AwarenessCampaignComponent } from './awareness-campaign/awareness-campa
 import { BankDetailsComponent } from './bank-details/bank-details.component';
 import { SponsorRegisterComponent } from './sponsor-register/sponsor-register.component';
 import { SidemenuNavbarComponent } from './sidemenu-navbar/sidemenu-navbar.component';
+
  @NgModule({
   declarations: [
     AppComponent,

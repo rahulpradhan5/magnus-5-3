@@ -3,6 +3,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { ActivatedRoute } from '@angular/router';
 import { AuthService } from '../shared/auth.service';
+import { HttpClient } from '@angular/common/http';
 interface Tree{
   left?:string;
   right?:string;
@@ -22,18 +23,24 @@ export class RegistrationComponent implements OnInit {
   id:string = '';
   branch:string = '';
   myid?:string='';
+  apiResponse: any;
   tree?:Tree= {
   };
 
   cid ?:ID;
 
-  constructor(public rout:ActivatedRoute,private auth : AuthService, fauth:AngularFireAuth,private fdb:AngularFirestore) {
+  constructor(private http: HttpClient,public rout:ActivatedRoute,private auth : AuthService, fauth:AngularFireAuth,private fdb:AngularFirestore) {
     this.id = rout.snapshot.params['id'];
     this.branch = rout.snapshot.params['branch'];
     auth.logout();
     fauth.user.subscribe(user=>{
       this.myid = user?.uid
+      this.http.get<any>('http://moneysagaconsultancy.com/api/api/insert?user_id='+this.myid ).subscribe(response => {
+        console.log(response);
+     
+     });
     })
+    
   
   }
 
@@ -75,6 +82,8 @@ export class RegistrationComponent implements OnInit {
     this.mobileNo = '';
    
     this.setLocationInTree(this.id);
+   
+    
   }
 
   setLocationInTree(id:string) {

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery'
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-tree-view2',
@@ -8,9 +9,15 @@ import * as $ from 'jquery'
 })
 export class TreeView2Component implements OnInit {
 
-  constructor() { }
-
+  constructor(private http: HttpClient) { }
+  apiResponse: any;
+  data:any;
+  uiid :any;
   ngOnInit(): void {
+   
+    const uid = sessionStorage.getItem('firebaseUserId');
+    this.uiid = uid;
+    console.log(this.uiid);
     $(function () {
       $('.genealogy-tree2 ul').hide();
       $('.genealogy-tree2>ul').show();
@@ -22,6 +29,9 @@ export class TreeView2Component implements OnInit {
           e.stopPropagation();
       });
   });
+  this.http.get<any>('https://moneysagaconsultancy.com/api/api/generationtree?user_id='+uid).subscribe(response => {
+    this.apiResponse = response.data;
+});
   }
 
 }

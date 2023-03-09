@@ -310,24 +310,7 @@
                                                                         aria-label="Total Deduction: activate to sort column ascending"
                                                                         style="width: 109.4px; user-select: text;">Total
                                                                         Deduction</th>
-                                                                    <th class="sorting" tabindex="0"
-                                                                        aria-controls="tblCommissionLegder" rowspan="1"
-                                                                        colspan="1"
-                                                                        aria-label="BF Amount: activate to sort column ascending"
-                                                                        style="width: 77.4px; user-select: text;">BF
-                                                                        Amount</th>
-                                                                    <th class="sorting" tabindex="0"
-                                                                        aria-controls="tblCommissionLegder" rowspan="1"
-                                                                        colspan="1"
-                                                                        aria-label="CF Amount: activate to sort column ascending"
-                                                                        style="width: 77.4px; user-select: text;">CF
-                                                                        Amount</th>
-                                                                    <th class="sorting" tabindex="0"
-                                                                        aria-controls="tblCommissionLegder" rowspan="1"
-                                                                        colspan="1"
-                                                                        aria-label="Net Amount: activate to sort column ascending"
-                                                                        style="width: 84.4px; user-select: text;">Net
-                                                                        Amount</th>
+                                                                   
                                                                     <th class="sorting" tabindex="0"
                                                                         aria-controls="tblCommissionLegder" rowspan="1"
                                                                         colspan="1"
@@ -437,7 +420,7 @@
 
 
 
-                                                                <tr role="row" class="odd" style="user-select: text;">
+                                                                <tr role="row" class="odd" style="user-select: text;"  *ngFor="let user of commisiondata">
                                                                     <td data-label="Sr. No" class="sorting_1"
                                                                         style="user-select: text;">1</td>
 
@@ -446,305 +429,20 @@
 
 
                                                                     <td data-label=" Company Payout No.(Remark)"
-                                                                        style="user-select: text;"> Payout No.142(
+                                                                        style="user-select: text;"> Payout No.{{user.id}}(
                                                                         Against Direct &amp; Renewal Income)</td>
                                                                     <td data-label="Start Date"
-                                                                        style="user-select: text;">18-02-2023</td>
+                                                                        style="user-select: text;">{{user.start_date}}</td>
                                                                     <td data-label="End Date"
-                                                                        style="user-select: text;">24-02-2023</td>
+                                                                        style="user-select: text;">{{user.end_date}}</td>
                                                                     <td data-label="Total Income"
-                                                                        style="user-select: text;">₹ 0.00</td>
+                                                                        style="user-select: text;">₹ {{user.revenue}}</td>
                                                                     <td data-label="Total Deduction"
-                                                                        style="user-select: text;">₹ 0.00</td>
-                                                                    <td data-label="BF Amount"
-                                                                        style="user-select: text;">₹ 2700.00</td>
-                                                                    <td data-label="CF Amount"
-                                                                        style="user-select: text;">₹ 2700.00</td>
-                                                                    <td data-label="Net Amount"
-                                                                        style="user-select: text;">₹ 0.00</td>
+                                                                        style="user-select: text;">₹ {{user.diducted}}</td>
                                                                     <td data-label="Statement"
                                                                         style="user-select: text;"> <a
                                                                             style="color: blue; user-select: text;"
                                                                             onclick="location.href = '/MyCommission/CommissionInvoiceVoucher?iType=6&amp;dtCode=143'">View
-                                                                            Statement </a></td>
-                                                                </tr>
-                                                                <tr role="row" class="even" style="user-select: text;">
-                                                                    <td data-label="Sr. No" class="sorting_1"
-                                                                        style="user-select: text;">2</td>
-
-
-
-
-
-                                                                    <td data-label=" Company Payout No.(Remark)"
-                                                                        style="user-select: text;"> Payout No.141(
-                                                                        Against Direct &amp; Renewal Income)</td>
-                                                                    <td data-label="Start Date"
-                                                                        style="user-select: text;">11-02-2023</td>
-                                                                    <td data-label="End Date"
-                                                                        style="user-select: text;">17-02-2023</td>
-                                                                    <td data-label="Total Income"
-                                                                        style="user-select: text;">₹ 0.00</td>
-                                                                    <td data-label="Total Deduction"
-                                                                        style="user-select: text;">₹ 0.00</td>
-                                                                    <td data-label="BF Amount"
-                                                                        style="user-select: text;">₹ 2700.00</td>
-                                                                    <td data-label="CF Amount"
-                                                                        style="user-select: text;">₹ 2700.00</td>
-                                                                    <td data-label="Net Amount"
-                                                                        style="user-select: text;">₹ 0.00</td>
-                                                                    <td data-label="Statement"
-                                                                        style="user-select: text;"> <a
-                                                                            style="color: blue; user-select: text;"
-                                                                            onclick="location.href = '/MyCommission/CommissionInvoiceVoucher?iType=6&amp;dtCode=142'">View
-                                                                            Statement </a></td>
-                                                                </tr>
-                                                                <tr role="row" class="odd" style="user-select: text;">
-                                                                    <td data-label="Sr. No" class="sorting_1"
-                                                                        style="user-select: text;">3</td>
-
-
-
-
-
-                                                                    <td data-label=" Company Payout No.(Remark)"
-                                                                        style="user-select: text;"> Payout No.140(
-                                                                        Against Direct &amp; Renewal Income)</td>
-                                                                    <td data-label="Start Date"
-                                                                        style="user-select: text;">04-02-2023</td>
-                                                                    <td data-label="End Date"
-                                                                        style="user-select: text;">10-02-2023</td>
-                                                                    <td data-label="Total Income"
-                                                                        style="user-select: text;">₹ 0.00</td>
-                                                                    <td data-label="Total Deduction"
-                                                                        style="user-select: text;">₹ 0.00</td>
-                                                                    <td data-label="BF Amount"
-                                                                        style="user-select: text;">₹ 2700.00</td>
-                                                                    <td data-label="CF Amount"
-                                                                        style="user-select: text;">₹ 2700.00</td>
-                                                                    <td data-label="Net Amount"
-                                                                        style="user-select: text;">₹ 0.00</td>
-                                                                    <td data-label="Statement"
-                                                                        style="user-select: text;"> <a
-                                                                            style="color: blue; user-select: text;"
-                                                                            onclick="location.href = '/MyCommission/CommissionInvoiceVoucher?iType=6&amp;dtCode=141'">View
-                                                                            Statement </a></td>
-                                                                </tr>
-                                                                <tr role="row" class="even" style="user-select: text;">
-                                                                    <td data-label="Sr. No" class="sorting_1"
-                                                                        style="user-select: text;">4</td>
-
-
-
-
-
-                                                                    <td data-label=" Company Payout No.(Remark)"
-                                                                        style="user-select: text;"> Payout No.34(
-                                                                        Against Leadership/CCM Bonus)</td>
-                                                                    <td data-label="Start Date"
-                                                                        style="user-select: text;">06-01-2023</td>
-                                                                    <td data-label="End Date"
-                                                                        style="user-select: text;">05-02-2023</td>
-                                                                    <td data-label="Total Income"
-                                                                        style="user-select: text;">₹ 0.00</td>
-                                                                    <td data-label="Total Deduction"
-                                                                        style="user-select: text;">₹ 0.00</td>
-                                                                    <td data-label="BF Amount"
-                                                                        style="user-select: text;">₹ 180.00</td>
-                                                                    <td data-label="CF Amount"
-                                                                        style="user-select: text;">₹ 180.00</td>
-                                                                    <td data-label="Net Amount"
-                                                                        style="user-select: text;">₹ 0.00</td>
-                                                                    <td data-label="Statement"
-                                                                        style="user-select: text;"> <a
-                                                                            style="color: blue; user-select: text;"
-                                                                            onclick="location.href = '/MyCommission/CommissionInvoiceVoucher?iType=2&amp;dtCode=35'">View
-                                                                            Statement </a></td>
-                                                                </tr>
-                                                                <tr role="row" class="odd" style="user-select: text;">
-                                                                    <td data-label="Sr. No" class="sorting_1"
-                                                                        style="user-select: text;">5</td>
-
-
-
-
-
-                                                                    <td data-label=" Company Payout No.(Remark)"
-                                                                        style="user-select: text;"> Payout No.139(
-                                                                        Against Direct &amp; Renewal Income)</td>
-                                                                    <td data-label="Start Date"
-                                                                        style="user-select: text;">28-01-2023</td>
-                                                                    <td data-label="End Date"
-                                                                        style="user-select: text;">03-02-2023</td>
-                                                                    <td data-label="Total Income"
-                                                                        style="user-select: text;">₹ 0.00</td>
-                                                                    <td data-label="Total Deduction"
-                                                                        style="user-select: text;">₹ 0.00</td>
-                                                                    <td data-label="BF Amount"
-                                                                        style="user-select: text;">₹ 2700.00</td>
-                                                                    <td data-label="CF Amount"
-                                                                        style="user-select: text;">₹ 2700.00</td>
-                                                                    <td data-label="Net Amount"
-                                                                        style="user-select: text;">₹ 0.00</td>
-                                                                    <td data-label="Statement"
-                                                                        style="user-select: text;"> <a
-                                                                            style="color: blue; user-select: text;"
-                                                                            onclick="location.href = '/MyCommission/CommissionInvoiceVoucher?iType=6&amp;dtCode=140'">View
-                                                                            Statement </a></td>
-                                                                </tr>
-                                                                <tr role="row" class="even" style="user-select: text;">
-                                                                    <td data-label="Sr. No" class="sorting_1"
-                                                                        style="user-select: text;">6</td>
-
-
-
-
-
-                                                                    <td data-label=" Company Payout No.(Remark)"
-                                                                        style="user-select: text;"> Payout No.138(
-                                                                        Against Direct &amp; Renewal Income)</td>
-                                                                    <td data-label="Start Date"
-                                                                        style="user-select: text;">21-01-2023</td>
-                                                                    <td data-label="End Date"
-                                                                        style="user-select: text;">27-01-2023</td>
-                                                                    <td data-label="Total Income"
-                                                                        style="user-select: text;">₹ 0.00</td>
-                                                                    <td data-label="Total Deduction"
-                                                                        style="user-select: text;">₹ 0.00</td>
-                                                                    <td data-label="BF Amount"
-                                                                        style="user-select: text;">₹ 2700.00</td>
-                                                                    <td data-label="CF Amount"
-                                                                        style="user-select: text;">₹ 2700.00</td>
-                                                                    <td data-label="Net Amount"
-                                                                        style="user-select: text;">₹ 0.00</td>
-                                                                    <td data-label="Statement"
-                                                                        style="user-select: text;"> <a
-                                                                            style="color: blue; user-select: text;"
-                                                                            onclick="location.href = '/MyCommission/CommissionInvoiceVoucher?iType=6&amp;dtCode=139'">View
-                                                                            Statement </a></td>
-                                                                </tr>
-                                                                <tr role="row" class="odd" style="user-select: text;">
-                                                                    <td data-label="Sr. No" class="sorting_1"
-                                                                        style="user-select: text;">7</td>
-
-
-
-
-
-                                                                    <td data-label=" Company Payout No.(Remark)"
-                                                                        style="user-select: text;"> Payout No.137(
-                                                                        Against Direct &amp; Renewal Income)</td>
-                                                                    <td data-label="Start Date"
-                                                                        style="user-select: text;">14-01-2023</td>
-                                                                    <td data-label="End Date"
-                                                                        style="user-select: text;">20-01-2023</td>
-                                                                    <td data-label="Total Income"
-                                                                        style="user-select: text;">₹ 0.00</td>
-                                                                    <td data-label="Total Deduction"
-                                                                        style="user-select: text;">₹ 0.00</td>
-                                                                    <td data-label="BF Amount"
-                                                                        style="user-select: text;">₹ 2700.00</td>
-                                                                    <td data-label="CF Amount"
-                                                                        style="user-select: text;">₹ 2700.00</td>
-                                                                    <td data-label="Net Amount"
-                                                                        style="user-select: text;">₹ 0.00</td>
-                                                                    <td data-label="Statement"
-                                                                        style="user-select: text;"> <a
-                                                                            style="color: blue; user-select: text;"
-                                                                            onclick="location.href = '/MyCommission/CommissionInvoiceVoucher?iType=6&amp;dtCode=138'">View
-                                                                            Statement </a></td>
-                                                                </tr>
-                                                                <tr role="row" class="even" style="user-select: text;">
-                                                                    <td data-label="Sr. No" class="sorting_1"
-                                                                        style="user-select: text;">8</td>
-
-
-
-
-
-                                                                    <td data-label=" Company Payout No.(Remark)"
-                                                                        style="user-select: text;"> Payout No.136(
-                                                                        Against Direct &amp; Renewal Income)</td>
-                                                                    <td data-label="Start Date"
-                                                                        style="user-select: text;">07-01-2023</td>
-                                                                    <td data-label="End Date"
-                                                                        style="user-select: text;">13-01-2023</td>
-                                                                    <td data-label="Total Income"
-                                                                        style="user-select: text;">₹ 0.00</td>
-                                                                    <td data-label="Total Deduction"
-                                                                        style="user-select: text;">₹ 0.00</td>
-                                                                    <td data-label="BF Amount"
-                                                                        style="user-select: text;">₹ 2700.00</td>
-                                                                    <td data-label="CF Amount"
-                                                                        style="user-select: text;">₹ 2700.00</td>
-                                                                    <td data-label="Net Amount"
-                                                                        style="user-select: text;">₹ 0.00</td>
-                                                                    <td data-label="Statement"
-                                                                        style="user-select: text;"> <a
-                                                                            style="color: blue; user-select: text;"
-                                                                            onclick="location.href = '/MyCommission/CommissionInvoiceVoucher?iType=6&amp;dtCode=137'">View
-                                                                            Statement </a></td>
-                                                                </tr>
-                                                                <tr role="row" class="odd" style="user-select: text;">
-                                                                    <td data-label="Sr. No" class="sorting_1"
-                                                                        style="user-select: text;">9</td>
-
-
-
-
-
-                                                                    <td data-label=" Company Payout No.(Remark)"
-                                                                        style="user-select: text;"> Payout No.135(
-                                                                        Against Direct &amp; Renewal Income)</td>
-                                                                    <td data-label="Start Date"
-                                                                        style="user-select: text;">31-12-2022</td>
-                                                                    <td data-label="End Date"
-                                                                        style="user-select: text;">06-01-2023</td>
-                                                                    <td data-label="Total Income"
-                                                                        style="user-select: text;">₹ 0.00</td>
-                                                                    <td data-label="Total Deduction"
-                                                                        style="user-select: text;">₹ 0.00</td>
-                                                                    <td data-label="BF Amount"
-                                                                        style="user-select: text;">₹ 2700.00</td>
-                                                                    <td data-label="CF Amount"
-                                                                        style="user-select: text;">₹ 2700.00</td>
-                                                                    <td data-label="Net Amount"
-                                                                        style="user-select: text;">₹ 0.00</td>
-                                                                    <td data-label="Statement"
-                                                                        style="user-select: text;"> <a
-                                                                            style="color: blue; user-select: text;"
-                                                                            onclick="location.href = '/MyCommission/CommissionInvoiceVoucher?iType=6&amp;dtCode=136'">View
-                                                                            Statement </a></td>
-                                                                </tr>
-                                                                <tr role="row" class="even" style="user-select: text;">
-                                                                    <td data-label="Sr. No" class="sorting_1"
-                                                                        style="user-select: text;">10</td>
-
-
-
-
-
-                                                                    <td data-label=" Company Payout No.(Remark)"
-                                                                        style="user-select: text;"> Payout No.33(
-                                                                        Against Leadership/CCM Bonus)</td>
-                                                                    <td data-label="Start Date"
-                                                                        style="user-select: text;">06-12-2022</td>
-                                                                    <td data-label="End Date"
-                                                                        style="user-select: text;">05-01-2023</td>
-                                                                    <td data-label="Total Income"
-                                                                        style="user-select: text;">₹ 0.00</td>
-                                                                    <td data-label="Total Deduction"
-                                                                        style="user-select: text;">₹ 0.00</td>
-                                                                    <td data-label="BF Amount"
-                                                                        style="user-select: text;">₹ 180.00</td>
-                                                                    <td data-label="CF Amount"
-                                                                        style="user-select: text;">₹ 180.00</td>
-                                                                    <td data-label="Net Amount"
-                                                                        style="user-select: text;">₹ 0.00</td>
-                                                                    <td data-label="Statement"
-                                                                        style="user-select: text;"> <a
-                                                                            style="color: blue; user-select: text;"
-                                                                            onclick="location.href = '/MyCommission/CommissionInvoiceVoucher?iType=2&amp;dtCode=34'">View
                                                                             Statement </a></td>
                                                                 </tr>
                                                             </tbody>
@@ -758,16 +456,12 @@
                                                                     <td id="showTD" style="user-select: text;"></td>
                                                                     <td style="padding-bottom: 16px; user-select: text;"
                                                                         data-label="Total Income" id="SetTDStyle"> ₹
-                                                                        13100</td>
+                                                                        {{getSumOfAmount()}}</td>
                                                                     <td style="padding-bottom: 16px; user-select: text;"
                                                                         data-label="Total Deduction" id="SetTDStyle"> ₹
-                                                                        1310</td>
+                                                                        {{getSumOfDiuduction()}}</td>
 
-                                                                    <td id="showTD" style="user-select: text;"></td>
-                                                                    <td id="showTD" style="user-select: text;"></td>
-                                                                    <td style="padding-bottom: 16px; user-select: text;"
-                                                                        data-label="Net Amount" id="SetTDStyle">₹ 8910
-                                                                    </td>
+                                                                   
                                                                     <td id="showTD" style="user-select: text;"></td>
                                                                 </tr>
                                                             </tbody>

@@ -37318,3 +37318,25 @@ button.close {
         margin-top: -3vh !important;
     }
     }
+
+    .treeuser{
+        position: relative;
+    }
+    .show_div{
+        position: absolute;
+        background-color: #bd842787;
+        border-radius: 5px;
+        width: 200px;
+        height: auto;
+        padding: 10px 20px 10px 20px;
+        color: #000;
+        display: none;
+        left: 30%;
+        text-align: start;
+        align-items: center;
+        overflow: hidden;
+
+    }
+    .user_div:hover + .show_div{
+        display: block;
+    }

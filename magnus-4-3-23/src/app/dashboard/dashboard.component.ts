@@ -4,6 +4,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Route, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { DatePipe } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -31,13 +32,15 @@ export class DashboardComponent implements OnInit {
   confirmtodayLeftcountPv:any;
   ownPv:any;
   todayownPv:any;
-  constructor (fauth:AngularFireAuth, rout:Router,public fas:AngularFirestore,private http: HttpClient){
+  totalLeftcount:any;
+  totalrightcount:any;
+  constructor (fauth:AngularFireAuth, rout:Router,public fas:AngularFirestore,private http: HttpClient,public ActiveRoute:ActivatedRoute){
     
    }
 
   ngOnInit(): void {
- 
-    this.http.get('http://moneysagaconsultancy.com/api/api/totaluserdata?user_id=ab00003')
+    const uid = sessionStorage.getItem('firebaseUserId');
+    this.http.get('http://moneysagaconsultancy.com/api/api/totaluserdata?user_id='+uid)
     .subscribe((data:any) => {
       this.userData = data.allusers;
       this.todayDataleftconfirmcount = data.today_data_left_count_confirm;
@@ -58,6 +61,8 @@ export class DashboardComponent implements OnInit {
       this.todayRightcountPv = data.today_right_count_pv;
       this.ownPv = data.ownPv;
       this.todayownPv = data.TodayownPv;
+      this.totalLeftcount = data.total_details.leftdata.length;
+      this.totalrightcount = data.total_details.rightdata.length;
       console.log(data.today_data_right_count_confirm);
     });
   }

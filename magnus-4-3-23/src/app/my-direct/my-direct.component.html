@@ -656,10 +656,10 @@
                                                                     </thead>
                                                                     <tbody style="user-select: text;">
                                                                         <tr role="row" class="odd"
-                                                                            style="user-select: text;">
+                                                                            style="user-select: text;" *ngFor="let data of leftdata">
                                                                             <td data-label="
                     ID
-                " style="user-select: text;">MCS342131</td>
+                " style="user-select: text;">{{data.id}}</td>
                                                                             <td data-label="
                     Name
                 " style="user-select: text;">Rajesh Karekar</td>
@@ -668,136 +668,40 @@
                 " style="user-select: text;">Left</td>
                                                                             <td data-label="
                     Date Of Joining
-                " style="user-select: text;">23/04/2021 04:50:00 PM</td>
+                " style="user-select: text;">{{data.created_at}}</td>
                                                                             <td data-label="
                     Date Of Upgradation
-                " style="user-select: text;">02/05/2021 12:00:00 AM</td>
+                " style="user-select: text;">{{data.created_at}}</td>
                                                                             <td data-label="
                     Current Status
                 " style="user-select: text;">Inactive</td>
                                                                             <td data-label="
                     Date of latest renewal
-                " style="user-select: text;">02/07/2021 07:56:38 AM</td>
+                " style="user-select: text;">{{data.created_at}}</td>
                                                                         </tr>
                                                                         <tr role="row" class="even"
-                                                                            style="user-select: text;">
+                                                                            style="user-select: text;" *ngFor="let righdata of rightdata">
                                                                             <td data-label="
                     ID
-                " style="user-select: text;">MCS002594</td>
+                " style="user-select: text;">{{righdata.id}}</td>
                                                                             <td data-label="
                     Name
                 " style="user-select: text;">Jyotiraditya Bhagat</td>
                                                                             <td data-label="
                     Position w.r.t Me
-                " style="user-select: text;">Left</td>
+                " style="user-select: text;">right</td>
                                                                             <td data-label="
                     Date Of Joining
-                " style="user-select: text;">31/03/2021 03:58:00 PM</td>
+                " style="user-select: text;">{{righdata.created_at}}</td>
                                                                             <td data-label="
                     Date Of Upgradation
-                " style="user-select: text;">06/04/2021 12:00:00 AM</td>
+                " style="user-select: text;">{{righdata.created_at}}</td>
                                                                             <td data-label="
                     Current Status
                 " style="user-select: text;">Inactive</td>
                                                                             <td data-label="
                     Date of latest renewal
-                " style="user-select: text;">27/03/2022 01:20:54 PM</td>
-                                                                        </tr>
-                                                                        <tr role="row" class="odd"
-                                                                            style="user-select: text;">
-                                                                            <td data-label="
-                    ID
-                " style="user-select: text;">MCS219222</td>
-                                                                            <td data-label="
-                    Name
-                " style="user-select: text;">Firoz Nazir Gumgol</td>
-                                                                            <td data-label="
-                    Position w.r.t Me
-                " style="user-select: text;">Right</td>
-                                                                            <td data-label="
-                    Date Of Joining
-                " style="user-select: text;">01/02/2021 04:28:00 AM</td>
-                                                                            <td data-label="
-                    Date Of Upgradation
-                " style="user-select: text;">06/02/2021 12:00:00 AM</td>
-                                                                            <td data-label="
-                    Current Status
-                " style="user-select: text;">Inactive</td>
-                                                                            <td data-label="
-                    Date of latest renewal
-                " style="user-select: text;">20/04/2021 07:06:01 AM</td>
-                                                                        </tr>
-                                                                        <tr role="row" class="even"
-                                                                            style="user-select: text;">
-                                                                            <td data-label="
-                    ID
-                " style="user-select: text;">MCS439697</td>
-                                                                            <td data-label="
-                    Name
-                " style="user-select: text;">Firoz Gumgol</td>
-                                                                            <td data-label="
-                    Position w.r.t Me
-                " style="user-select: text;">Right</td>
-                                                                            <td data-label="
-                    Date Of Joining
-                " style="user-select: text;">28/01/2021 04:55:00 PM</td>
-                                                                            <td data-label="
-                    Date Of Upgradation
-                " style="user-select: text;"></td>
-                                                                            <td data-label="
-                    Current Status
-                " style="user-select: text;">Inactive</td>
-                                                                            <td data-label="
-                    Date of latest renewal
-                " style="user-select: text;"></td>
-                                                                        </tr>
-                                                                        <tr role="row" class="odd"
-                                                                            style="user-select: text;">
-                                                                            <td data-label="
-                    ID
-                " style="user-select: text;">MCS281180</td>
-                                                                            <td data-label="
-                    Name
-                " style="user-select: text;">Sanket Naik</td>
-                                                                            <td data-label="
-                    Position w.r.t Me
-                " style="user-select: text;">Left</td>
-                                                                            <td data-label="
-                    Date Of Joining
-                " style="user-select: text;">09/02/2021 04:26:00 PM</td>
-                                                                            <td data-label="
-                    Date Of Upgradation
-                " style="user-select: text;">22/02/2021 06:30:00 PM</td>
-                                                                            <td data-label="
-                    Current Status
-                " style="user-select: text;">Inactive</td>
-                                                                            <td data-label="
-                    Date of latest renewal
-                " style="user-select: text;"></td>
-                                                                        </tr>
-                                                                        <tr role="row" class="even"
-                                                                            style="user-select: text;">
-                                                                            <td data-label="
-                    ID
-                " style="user-select: text;">MCS642966</td>
-                                                                            <td data-label="
-                    Name
-                " style="user-select: text;">HANUMANT KALUCHE</td>
-                                                                            <td data-label="
-                    Position w.r.t Me
-                " style="user-select: text;">Left</td>
-                                                                            <td data-label="
-                    Date Of Joining
-                " style="user-select: text;">15/03/2021 07:05:00 PM</td>
-                                                                            <td data-label="
-                    Date Of Upgradation
-                " style="user-select: text;"></td>
-                                                                            <td data-label="
-                    Current Status
-                " style="user-select: text;">Inactive</td>
-                                                                            <td data-label="
-                    Date of latest renewal
-                " style="user-select: text;"></td>
+                " style="user-select: text;">{{righdata.created_at}}</td>
                                                                         </tr>
                                                                     </tbody>
                                                                 </table>

@@ -93,7 +93,7 @@ const routes: Routes = [
   { path: 'success-e-pin', component: SuccessEpinComponent },
   { path: 'UpgradeDetails', component: UpgradeSubscriptionComponent },
   { path: 'dashboard-al', component: DashboardWgComponent },
-  { path: 'tree', component: TreeviewWgComponent },
+  { path: 'tree/:id/view', component: TreeviewWgComponent },
   { path: 'ComposeMessage', component: ComposemessageComponent },
   { path: 'GenerationTreeView', component: GenerationTreeComponent },
   { path: 'MyDirect', component: MyDirectComponent },

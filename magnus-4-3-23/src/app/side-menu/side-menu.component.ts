@@ -15,11 +15,12 @@ export class SideMenuComponent implements OnInit {
   isLogedin = false;
   currentRoute: string='';
   set: boolean = true;
+  myId :any;
+
   constructor(public auth:AuthService,public firebaseAuth:AngularFireAuth,public router:Router) { 
 
     firebaseAuth.user.subscribe(user=> {
       if(user) {
-
         this.isLogedin = true;
       }else{
         this.isLogedin = false;
@@ -32,6 +33,8 @@ export class SideMenuComponent implements OnInit {
   }
 
   ngOnInit(): void {
+   this.myId = sessionStorage.getItem('firebaseUserId');
+    // console.log(this.myId);
     const id=localStorage.getItem('sideMenu')
     console.log(id)
     if(id=='m1'){

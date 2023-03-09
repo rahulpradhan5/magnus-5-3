@@ -13,12 +13,15 @@ export class LoginComponent implements OnInit {
   email : string = '';
   password : string = '';
   
-  constructor(private auth : AuthService,firebaseAuth :AngularFireAuth,router :Router) { 
+  constructor(private auth : AuthService,private firebaseAuth :AngularFireAuth,router :Router) { 
   }
 
   ngOnInit(): void {
+    
   }
+  
   logout() {
+    sessionStorage.removeItem('firebaseUserId');
     this.auth.logout()
   }
   
@@ -38,7 +41,12 @@ export class LoginComponent implements OnInit {
     
     this.email = '';
     this.password = '';
-
+    this.firebaseAuth.authState.subscribe(user => {
+      if (user) {
+        sessionStorage.setItem('firebaseUserId', user.uid);
+      } 
+    });
   }
-
+ 
 }
+

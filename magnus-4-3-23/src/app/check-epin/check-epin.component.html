@@ -22,13 +22,13 @@
                         </style>
                         <br>
                         <link href="/content/treeview/mytreestyle.css" rel="stylesheet">
-                        <form action="/Epin/CheckEpin" method="post"><input name="__RequestVerificationToken"
+                        <form action="/Epin/CheckEpin" method="post" (ngSubmit)=" checkPassword()"><input name="__RequestVerificationToken"
                                 type="hidden"
                                 value="v_zvF5Aj1btuvZXIonAp-PknqKNm5V8PkGHhFGVpSCX5yQbRvezYyr5yDqKd_hHt-Z6M2rle-BAWs7LOUuZRBhv8P7UcCist6tMBnMWgPpo1">
                             <div class="sparkline9-list shadow-reset">
                                 <div class="sparkline9-hd">
                                     <div class="main-sparkline16-hd">
-                                        <h1>Check E-Pin</h1>
+                                        <h1>Generate E-Pin</h1>
                                     </div>
                                 </div>
 
@@ -48,11 +48,11 @@
                                                     <div class="form-group-inner">
                                                         <div class="row">
                                                             <div class="col-md-4">
-                                                                <label for="SerialNo">Serial No</label>
+                                                                <label for="SerialNo">Mobile No</label>
                                                             </div>
                                                             <div class="col-md-6">
                                                                 <input class="form-control" id="txtSerialNo"
-                                                                    name="SerialNo" type="text" value="">
+                                                                    name="SerialNo" type="text" value="" [(ngModel)] = "phone_no">
                                                                 <span class="field-validation-valid"
                                                                     data-valmsg-for="SerialNo"
                                                                     data-valmsg-replace="true"></span>
@@ -63,14 +63,16 @@
                                                         </div>
                                                     </div>
 
-                                                    <div class="form-group-inner">
+                                                    <!-- <div class="form-group-inner my-5"> -->
+                                                        <div class="form-group-inner">
+
                                                         <div class="row">
                                                             <div class="col-md-4">
-                                                                <label for="SecretCode">Secret Code</label>
+                                                                <label for="SecretCode">Password</label>
                                                             </div>
                                                             <div class="col-md-6">
                                                                 <input class="form-control" id="txtSecretCode"
-                                                                    name="SecretCode" type="text" value="">
+                                                                    name="SecretCode" type="text" value="" [(ngModel)] = "password">
                                                                 <span class="field-validation-valid"
                                                                     data-valmsg-for="SecretCode"
                                                                     data-valmsg-replace="true"></span>
@@ -86,10 +88,9 @@
                                         <div class="login-horizental cancel-wp align-middle">
 
                                             <button type="submit" class="btn btn-custon-four btn-primary"
-                                                id="ChkPin-button" name="ChkPin-button" tabindex="2"><i
-                                                    class="fa fa-search"></i> Search</button>
-                                            <button type="button" class="btn btn-custon-four btn-warning" id="btnreset"
-                                                tabindex="1"><i class="fa fa-refresh"></i> Reset</button>
+                                                id="ChkPin-button" name="ChkPin-button" tabindex="2">  Generate E-pin</button>
+                                            <!-- <button type="button" class="btn btn-custon-four btn-warning" id="btnreset"
+                                                tabindex="1"><i class="fa fa-refresh"></i> Reset</button> -->
 
                                         </div>
                                     </div>
