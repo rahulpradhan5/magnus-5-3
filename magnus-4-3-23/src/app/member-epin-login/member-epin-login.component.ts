@@ -29,6 +29,7 @@ export class MemberEpinLoginComponent implements OnInit {
     this.myId = uid;
     this.http.get('http://moneysagaconsultancy.com/api/api/Package?user_id='+uid)
     .subscribe((data:any) => {
+      console.log(data);
      if(data.epin == ''){
       this.mpin = 'not generated';
      }else{
@@ -37,7 +38,7 @@ export class MemberEpinLoginComponent implements OnInit {
      if(data.revenue == ''){
       this.revenue = 0;
      }else{
-      this.revenue = data.revenue;
+      this.revenue = data.revenue[0]['revenue'];
      }
      this.payments = data.payments;
 
@@ -59,12 +60,15 @@ export class MemberEpinLoginComponent implements OnInit {
       return
     }
 
-    if(this.packages[1] >= this.revenue){
+    if(this.packages.package >= this.revenue){
       alert('you have low balance');
       return
     }
-    this.http.get('http://moneysagaconsultancy.com/api/api/givePackage?user_id='+this.myId+'&guid='+this.user+'&package='+this.packag[0]+'&amount='+this.packag[1])
+    console.log(this.packages);
+    let myArray = this.packages.split(',');
+    this.http.get('http://moneysagaconsultancy.com/api/api/givePackage?user_id='+this.myId+'&guid='+this.user+'&package='+myArray[0]+'&amount='+myArray[1])
     .subscribe((data:any) => {
+      alert(data.message);
       console.log(data);
     })
    

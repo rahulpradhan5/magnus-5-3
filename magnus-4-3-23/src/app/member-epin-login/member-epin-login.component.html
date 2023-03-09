@@ -188,7 +188,7 @@
                                                                         <select class="form-control"
                                                                         id="txtSecretCode"
                                                                         name="SecretCode" type="text" value="" [(ngModel)] = "packages" *ngIf="packag.length != 0"  >
-                                                                            <option  *ngFor="let datas of packag" value="[{{datas.id}},{{datas.amount}}]">{{datas.package}}</option>
+                                                                            <option  *ngFor="let datas of packag" [value]="[datas.id, datas.amount]">{{datas.package}}</option>
                                                                            
                                                                         </select>
                                                                         <select class="form-control"
