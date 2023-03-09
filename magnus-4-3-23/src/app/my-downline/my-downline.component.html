@@ -278,29 +278,29 @@
                                                         <tr style="user-select: text;">
                                                             <td data-label="Total Left Count"
                                                                 style="user-select: text;">
-                                                                5 </td>
+                                                                {{totalLeftcount}}</td>
                                                             <td data-label="Total Right Count"
                                                                 style="user-select: text;">
-                                                                4 </td>
+                                                                {{totalrightcount}} </td>
                                                             <td data-label="Confirm Left Count"
                                                                 style="user-select: text;">
-                                                                4 </td>
+                                                                {{totalDataconleft}} </td>
                                                             <td data-label="Confirm Right Count"
                                                                 style="user-select: text;">
-                                                                2 </td>
+                                                                {{totalDataconright}} </td>
                                                             <td data-label="Total Left PV" style="user-select: text;">
-                                                                400.00 </td>
+                                                                {{totalleftpv}} </td>
                                                             <td data-label="Total Right PV" style="user-select: text;">
-                                                                200.00 </td>
+                                                                {{totalrightpv}}</td>
                                                             <td data-label="Confirm Left PV" style="user-select: text;">
-                                                                400.00 </td>
+                                                                {{totalconfirmleftpv}} </td>
                                                             <td data-label="Confirm Right PV"
                                                                 style="user-select: text;">
-                                                                200.00 </td>
+                                                                {{totalcomfirmrightpv}} </td>
                                                             <td data-label="Own PV" style="user-select: text;">
-                                                                100.00 </td>
+                                                                {{ownPv}}</td>
                                                             <td data-label="Confirm Own PV" style="user-select: text;">
-                                                                100.00 </td>
+                                                                {{ownPv}}  </td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -412,15 +412,6 @@
                                                                             <th class="sorting" tabindex="0"
                                                                                 aria-controls="mydirectDataTable"
                                                                                 rowspan="1" colspan="1"
-                                                                                style="width: 41.4px; user-select: text;"
-                                                                                aria-label="
-            Level
-        : activate to sort column ascending">
-                                                                                Level
-                                                                            </th>
-                                                                            <th class="sorting" tabindex="0"
-                                                                                aria-controls="mydirectDataTable"
-                                                                                rowspan="1" colspan="1"
                                                                                 style="width: 86.4px; user-select: text;"
                                                                                 aria-label="
             Sponsor ID
@@ -511,18 +502,6 @@
                                                                         <th class="sorting"
                                                                             aria-controls="mydirectDataTable"
                                                                             rowspan="1" colspan="1"
-                                                                            style="width: 52.4px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; user-select: text;"
-                                                                            aria-label="
-            Status
-        : activate to sort column ascending">
-                                                                            <div class="dataTables_sizing"
-                                                                                style="height: 0px; overflow: hidden; user-select: text;">
-                                                                                Status
-                                                                            </div>
-                                                                        </th>
-                                                                        <th class="sorting"
-                                                                            aria-controls="mydirectDataTable"
-                                                                            rowspan="1" colspan="1"
                                                                             style="width: 81.4px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; user-select: text;"
                                                                             aria-label="
             DOJ
@@ -530,18 +509,6 @@
                                                                             <div class="dataTables_sizing"
                                                                                 style="height: 0px; overflow: hidden; user-select: text;">
                                                                                 DOJ
-                                                                            </div>
-                                                                        </th>
-                                                                        <th class="sorting"
-                                                                            aria-controls="mydirectDataTable"
-                                                                            rowspan="1" colspan="1"
-                                                                            style="width: 41.4px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px; user-select: text;"
-                                                                            aria-label="
-            Level
-        : activate to sort column ascending">
-                                                                            <div class="dataTables_sizing"
-                                                                                style="height: 0px; overflow: hidden; user-select: text;">
-                                                                                Level
                                                                             </div>
                                                                         </th>
                                                                         <th class="sorting"
@@ -585,10 +552,10 @@
 
                                                                 <tbody style="user-select: text;">
                                                                     <tr role="row" class="odd"
-                                                                        style="user-select: text;">
+                                                                        style="user-select: text;" *ngFor="let userData of leftdata">
                                                                         <td data-label="
             ID
-        " class="sorting_1" style="user-select: text;">MCS462713</td>
+        " class="sorting_1" style="user-select: text;">{{userData.id}}</td>
                                                                         <td data-label="
             Name
         " style="user-select: text;">VISHNU NAIK</td>
@@ -597,290 +564,55 @@
         " style="user-select: text;">Free Package ( 0.00 )</td>
                                                                         <td data-label="
             Current Package
-        " style="user-select: text;">Welcome Package( 8850.00 )</td>
-                                                                        <td data-label="
-            Status
-        " style="user-select: text;">Paid</td>
-                                                                        <td data-label="
-            DOJ
-        " style="user-select: text;">17/07/2021</td>
-                                                                        <td data-label="
-            Level
-        " style="user-select: text;">5</td>
-                                                                        <td data-label="
-            Sponsor ID
-        " style="user-select: text;">MCS342131</td>
-                                                                        <td data-label="
-            Adjusted To ID
-        " style="user-select: text;">MCS342131</td>
-                                                                        <td data-label="
-            Position W.R.T. Me
-        " style="user-select: text;">Left</td>
-                                                                    </tr>
-                                                                    <tr role="row" class="even"
-                                                                        style="user-select: text;">
-                                                                        <td data-label="
-            ID
-        " class="sorting_1" style="user-select: text;">MCS342131</td>
-                                                                        <td data-label="
-            Name
-        " style="user-select: text;">Rajesh Karekar</td>
-                                                                        <td data-label="
-            Joining Package
         " style="user-select: text;">Free Package ( 0.00 )</td>
                                                                         <td data-label="
-            Current Package
-        " style="user-select: text;">Welcome Package( 8850.00 )</td>
-                                                                        <td data-label="
             Status
         " style="user-select: text;">Paid</td>
                                                                         <td data-label="
             DOJ
-        " style="user-select: text;">23/04/2021</td>
-                                                                        <td data-label="
-            Level
-        " style="user-select: text;">4</td>
+        " style="user-select: text;">{{userData.created_at}}</td>
                                                                         <td data-label="
             Sponsor ID
-        " style="user-select: text;">MCS000018</td>
+        " style="user-select: text;">{{userData.owner}}</td>
                                                                         <td data-label="
             Adjusted To ID
-        " style="user-select: text;">MCS002594</td>
+        " style="user-select: text;">{{userData.referrer_id
+        }}</td>
                                                                         <td data-label="
             Position W.R.T. Me
         " style="user-select: text;">Left</td>
                                                                     </tr>
                                                                     <tr role="row" class="odd"
-                                                                        style="user-select: text;">
-                                                                        <td data-label="
-            ID
-        " class="sorting_1" style="user-select: text;">MCS002594</td>
-                                                                        <td data-label="
-            Name
-        " style="user-select: text;">Jyotiraditya Bhagat</td>
-                                                                        <td data-label="
-            Joining Package
-        " style="user-select: text;">Free Package ( 0.00 )</td>
-                                                                        <td data-label="
-            Current Package
-        " style="user-select: text;">Welcome Package( 8850.00 )</td>
-                                                                        <td data-label="
-            Status
-        " style="user-select: text;">Paid</td>
-                                                                        <td data-label="
-            DOJ
-        " style="user-select: text;">31/03/2021</td>
-                                                                        <td data-label="
-            Level
-        " style="user-select: text;">3</td>
-                                                                        <td data-label="
-            Sponsor ID
-        " style="user-select: text;">MCS000018</td>
-                                                                        <td data-label="
-            Adjusted To ID
-        " style="user-select: text;">MCS642966</td>
-                                                                        <td data-label="
-            Position W.R.T. Me
-        " style="user-select: text;">Left</td>
-                                                                    </tr>
-                                                                    <tr role="row" class="even"
-                                                                        style="user-select: text;">
-                                                                        <td data-label="
-            ID
-        " class="sorting_1" style="user-select: text;">MCS663048</td>
-                                                                        <td data-label="
-            Name
-        " style="user-select: text;">Satish Bhosle</td>
-                                                                        <td data-label="
-            Joining Package
-        " style="user-select: text;">Free Package ( 0.00 )</td>
-                                                                        <td data-label="
-            Current Package
-        " style="user-select: text;">Welcome Package( 8850.00 )</td>
-                                                                        <td data-label="
-            Status
-        " style="user-select: text;">Paid</td>
-                                                                        <td data-label="
-            DOJ
-        " style="user-select: text;">22/03/2021</td>
-                                                                        <td data-label="
-            Level
-        " style="user-select: text;">4</td>
-                                                                        <td data-label="
-            Sponsor ID
-        " style="user-select: text;">MCS393674</td>
-                                                                        <td data-label="
-            Adjusted To ID
-        " style="user-select: text;">MCS212793</td>
-                                                                        <td data-label="
-            Position W.R.T. Me
-        " style="user-select: text;">Right</td>
-                                                                    </tr>
-                                                                    <tr role="row" class="odd"
-                                                                        style="user-select: text;">
-                                                                        <td data-label="
-            ID
-        " class="sorting_1" style="user-select: text;">MCS212793</td>
-                                                                        <td data-label="
-            Name
-        " style="user-select: text;">SHABODDIN SHAIKH</td>
-                                                                        <td data-label="
-            Joining Package
-        " style="user-select: text;">Free Package ( 0.00 )</td>
-                                                                        <td data-label="
-            Current Package
-        " style="user-select: text;">Free Package ( 0.00 )</td>
-                                                                        <td data-label="
-            Status
-        " style="user-select: text;">Unpaid</td>
-                                                                        <td data-label="
-            DOJ
-        " style="user-select: text;">18/03/2021</td>
-                                                                        <td data-label="
-            Level
-        " style="user-select: text;">3</td>
-                                                                        <td data-label="
-            Sponsor ID
-        " style="user-select: text;">MCS219222</td>
-                                                                        <td data-label="
-            Adjusted To ID
-        " style="user-select: text;">MCS219222</td>
-                                                                        <td data-label="
-            Position W.R.T. Me
-        " style="user-select: text;">Right</td>
-                                                                    </tr>
-                                                                    <tr role="row" class="even"
-                                                                        style="user-select: text;">
-                                                                        <td data-label="
-            ID
-        " class="sorting_1" style="user-select: text;">MCS642966</td>
-                                                                        <td data-label="
-            Name
-        " style="user-select: text;">HANUMANT KALUCHE</td>
-                                                                        <td data-label="
-            Joining Package
-        " style="user-select: text;">Free Package ( 0.00 )</td>
-                                                                        <td data-label="
-            Current Package
-        " style="user-select: text;">Free Package ( 0.00 )</td>
-                                                                        <td data-label="
-            Status
-        " style="user-select: text;">Unpaid</td>
-                                                                        <td data-label="
-            DOJ
-        " style="user-select: text;">15/03/2021</td>
-                                                                        <td data-label="
-            Level
-        " style="user-select: text;">2</td>
-                                                                        <td data-label="
-            Sponsor ID
-        " style="user-select: text;">MCS000018</td>
-                                                                        <td data-label="
-            Adjusted To ID
-        " style="user-select: text;">MCS281180</td>
-                                                                        <td data-label="
-            Position W.R.T. Me
-        " style="user-select: text;">Left</td>
-                                                                    </tr>
-                                                                    <tr role="row" class="odd"
-                                                                        style="user-select: text;">
-                                                                        <td data-label="
-            ID
-        " class="sorting_1" style="user-select: text;">MCS281180</td>
-                                                                        <td data-label="
-            Name
-        " style="user-select: text;">Sanket Naik</td>
-                                                                        <td data-label="
-            Joining Package
-        " style="user-select: text;">Free Package ( 0.00 )</td>
-                                                                        <td data-label="
-            Current Package
-        " style="user-select: text;">Welcome Package( 8850.00 )</td>
-                                                                        <td data-label="
-            Status
-        " style="user-select: text;">Paid</td>
-                                                                        <td data-label="
-            DOJ
-        " style="user-select: text;">09/02/2021</td>
-                                                                        <td data-label="
-            Level
-        " style="user-select: text;">1</td>
-                                                                        <td data-label="
-            Sponsor ID
-        " style="user-select: text;">MCS000018</td>
-                                                                        <td data-label="
-            Adjusted To ID
-        " style="user-select: text;">MCS000018</td>
-                                                                        <td data-label="
-            Position W.R.T. Me
-        " style="user-select: text;">Left</td>
-                                                                    </tr>
-                                                                    <tr role="row" class="even"
-                                                                        style="user-select: text;">
-                                                                        <td data-label="
-            ID
-        " class="sorting_1" style="user-select: text;">MCS219222</td>
-                                                                        <td data-label="
-            Name
-        " style="user-select: text;">Firoz Nazir Gumgol</td>
-                                                                        <td data-label="
-            Joining Package
-        " style="user-select: text;">Free Package ( 0.00 )</td>
-                                                                        <td data-label="
-            Current Package
-        " style="user-select: text;">Welcome Package( 8850.00 )</td>
-                                                                        <td data-label="
-            Status
-        " style="user-select: text;">Paid</td>
-                                                                        <td data-label="
-            DOJ
-        " style="user-select: text;">01/02/2021</td>
-                                                                        <td data-label="
-            Level
-        " style="user-select: text;">2</td>
-                                                                        <td data-label="
-            Sponsor ID
-        " style="user-select: text;">MCS000018</td>
-                                                                        <td data-label="
-            Adjusted To ID
-        " style="user-select: text;">MCS439697</td>
-                                                                        <td data-label="
-            Position W.R.T. Me
-        " style="user-select: text;">Right</td>
-                                                                    </tr>
-                                                                    <tr role="row" class="odd"
-                                                                        style="user-select: text;">
-                                                                        <td data-label="
-            ID
-        " class="sorting_1" style="user-select: text;">MCS439697</td>
-                                                                        <td data-label="
-            Name
-        " style="user-select: text;">Firoz Gumgol</td>
-                                                                        <td data-label="
-            Joining Package
-        " style="user-select: text;">Free Package ( 0.00 )</td>
-                                                                        <td data-label="
-            Current Package
-        " style="user-select: text;">Free Package ( 0.00 )</td>
-                                                                        <td data-label="
-            Status
-        " style="user-select: text;">Unpaid</td>
-                                                                        <td data-label="
-            DOJ
-        " style="user-select: text;">28/01/2021</td>
-                                                                        <td data-label="
-            Level
-        " style="user-select: text;">1</td>
-                                                                        <td data-label="
-            Sponsor ID
-        " style="user-select: text;">MCS000018</td>
-                                                                        <td data-label="
-            Adjusted To ID
-        " style="user-select: text;">MCS000018</td>
-                                                                        <td data-label="
-            Position W.R.T. Me
-        " style="user-select: text;">Right</td>
-                                                                    </tr>
+                                                                    style="user-select: text;" *ngFor="let userData of rightdata">
+                                                                    <td data-label="
+        ID
+    " class="sorting_1" style="user-select: text;">{{userData.id}}</td>
+                                                                    <td data-label="
+        Name
+    " style="user-select: text;">VISHNU NAIK</td>
+                                                                    <td data-label="
+        Joining Package
+    " style="user-select: text;">Free Package ( 0.00 )</td>
+                                                                    <td data-label="
+        Current Package
+    " style="user-select: text;">Free Package ( 0.00 )</td>
+                                                                    <td data-label="
+        Status
+    " style="user-select: text;">Paid</td>
+                                                                    <td data-label="
+        DOJ
+    " style="user-select: text;">{{userData.created_at}}</td>
+                                                                    <td data-label="
+        Sponsor ID
+    " style="user-select: text;">{{userData.owner}}</td>
+                                                                    <td data-label="
+        Adjusted To ID
+    " style="user-select: text;">{{userData.referrer_id
+    }}</td>
+                                                                    <td data-label="
+        Position W.R.T. Me
+    " style="user-select: text;">Right</td>
+                                                                </tr>
                                                                 </tbody>
                                                             </table>
                                                         </div>
