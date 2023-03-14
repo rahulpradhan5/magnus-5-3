@@ -14,7 +14,8 @@ export class MyDirectComponent implements OnInit {
   leftdata:any;
   rightdata:any;
   ngOnInit(): void {
-     const uid = sessionStorage.getItem('firebaseUserId');
+    //  const uid = 'ab00003';
+       const uid = sessionStorage.getItem('firebaseUserId');
      this.http.get('https://moneysagaconsultancy.com/api/api/totaluserdata?user_id='+uid)
       .subscribe((datas:any) => {
         this.apiresponse=datas;

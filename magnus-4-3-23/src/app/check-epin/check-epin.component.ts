@@ -29,7 +29,8 @@ export class CheckEpinComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.uid = sessionStorage.getItem('firebaseUserId');
+    // this.uid = 'ab00003';
+     this.uid = sessionStorage.getItem('firebaseUserId');
   }
 
   checkPassword() {
@@ -46,12 +47,14 @@ export class CheckEpinComponent implements OnInit {
       }
       
       if(this.mpin == undefined){
-        const docRef = this.firestore.collection('users').doc(this.uid);
-        docRef.get().subscribe((doc: any) => {
-          if (doc.exists) {
+     
+        const docRef = this.firestore.collection('users').doc(this.uid).valueChanges();
+        docRef.subscribe((doc: any) => {
+          if (doc!='') {
             // retrieve the password from the document
             this.email = doc.data().email;
             // verify the user's password
+
             this.auths.signInWithEmailAndPassword(this.email, this.password)
               .then(userCredential => {
                 // password is correct
@@ -64,6 +67,8 @@ export class CheckEpinComponent implements OnInit {
                 // password is incorrect or user doesn't exist
                alert('password not same')
               });
+          }else{
+            alert('data not exist');
           }
         });
       }else{

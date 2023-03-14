@@ -13,7 +13,8 @@ export class IdwisedownlineComponent implements OnInit {
   row:any;
   data:any;
   ngOnInit(): void {
-    const uid = sessionStorage.getItem('firebaseUserId');
+    // const uid = 'ab00003';
+     const uid = sessionStorage.getItem('firebaseUserId');
     this.http.get<any>('http://moneysagaconsultancy.com/api/api/totaluserdata?user_id='+uid).subscribe(response => {
         this.apiResponse = response;
      this.row = this.apiResponse.total_details.leftdata.concat(this.apiResponse.total_details.rightdata).reverse();

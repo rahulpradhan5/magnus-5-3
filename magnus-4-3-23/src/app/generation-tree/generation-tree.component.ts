@@ -13,7 +13,8 @@ export class GenerationTreeComponent implements OnInit {
   data:any;
 
   ngOnInit(): void {
-    const uid = sessionStorage.getItem('firebaseUserId');
+    const uid = 'ab00003';
+    // const uid = sessionStorage.getItem('firebaseUserId');
     this.http.get<any>('https://moneysagaconsultancy.com/api/api/generationtree?user_id='+uid).subscribe(response => {
       this.apiResponse = response;
       console.log()

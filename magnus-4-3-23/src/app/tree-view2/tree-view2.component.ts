@@ -14,8 +14,8 @@ export class TreeView2Component implements OnInit {
   data:any;
   uiid :any;
   ngOnInit(): void {
-   
-    const uid = sessionStorage.getItem('firebaseUserId');
+    // const uid = 'ab00003';
+     const uid = sessionStorage.getItem('firebaseUserId');
     this.uiid = uid;
     console.log(this.uiid);
     $(function () {

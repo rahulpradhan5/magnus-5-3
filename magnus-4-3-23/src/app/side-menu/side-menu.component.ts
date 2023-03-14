@@ -33,7 +33,8 @@ export class SideMenuComponent implements OnInit {
   }
 
   ngOnInit(): void {
-   this.myId = sessionStorage.getItem('firebaseUserId');
+    // this.myId = 'ab00003';
+    this.myId = sessionStorage.getItem('firebaseUserId');
     // console.log(this.myId);
     const id=localStorage.getItem('sideMenu')
     console.log(id)

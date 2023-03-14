@@ -199,9 +199,7 @@
                                                                     <tr role="row">
                                                                         <th class="sorting_disabled" rowspan="1"
                                                                             colspan="1" style="width: 88.4px;">ID</th>
-                                                                        <th class="sorting_disabled" rowspan="1"
-                                                                            colspan="1" style="width: 167.4px;">Name
-                                                                        </th>
+                                                                        
                                                                         <th class="sorting_disabled" rowspan="1"
                                                                             colspan="1" style="width: 437.4px;">Income
                                                                             On Earning </th>
@@ -210,16 +208,25 @@
                                                                             Percentage
                                                                         </th>
                                                                         <th class="sorting_disabled" rowspan="1"
-                                                                            colspan="1" style="width: 197.4px;">Income
+                                                                            colspan="1" style="width: 197.4px;">Date
                                                                         </th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                    <tr class="odd">
+                                                                    <ng-container *ngFor="let data of pairincome" >
+                                                                    <tr class="odd" *ngIf="data.revenue != 0">
                                                                         <td valign="top" colspan="5"
-                                                                            class="dataTables_empty">No
-                                                                            data available in table</td>
+                                                                            class="dataTables_empty">{{data.id}}</td>
+                                                                            <td valign="top" colspan="5"
+                                                                            class="dataTables_empty">{{data.revenue}}</td>
+                                                                            <td valign="top" colspan="5"
+                                                                            class="dataTables_empty">{{data.side}} 12%</td>
+                                                                            <td valign="top" colspan="5"
+                                                                            class="dataTables_empty">{{data.created_at}} %</td>
                                                                     </tr>
+                                                                    
+                                                                </ng-container>
+                                                                
                                                                 </tbody>
                                                             </table>
                                                             <div class="dataTables_info"

@@ -29,7 +29,8 @@ export class TreeviewWgComponent implements OnInit {
   constructor(private http: HttpClient,public ActiveRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
-    const uid = this.ActiveRoute.snapshot.params['id'];
+    
+     const uid = this.ActiveRoute.snapshot.params['id'];
     this.uuid=uid;
     this.http.get<any>('http://moneysagaconsultancy.com/api/api/tree?user_id='+uid).subscribe(response => {
         this.apiResponse = response.data;
@@ -52,8 +53,8 @@ export class TreeviewWgComponent implements OnInit {
         this.rightleftleftuser = this.apiResponse.children.right?.children.left?.children.left || 'undefined';
         this.rightleftrightuser = this.apiResponse.children.right?.children.left?.children.right || 'undefined';
         this.rightrightleftuser = this.apiResponse.children.right?.children.right?.children.left || 'undefined';
-        this.rightrightrightuser = this.apiResponse.children.right?.children.right?.children.right || 'undefined';
-    
+        this.rightrightrightuser =this.apiResponse.children.right?.children.right?.children.right || 'undefined';
+    console.log(this.rightrightrightuser);
     });
 }
 

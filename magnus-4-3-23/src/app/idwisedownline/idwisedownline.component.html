@@ -287,7 +287,10 @@
                 " class="sorting_1" style="user-select: text;">{{userData.id}}</td>
                                                                                 <td data-label="
                     Name
-                " style="user-select: text;">VISHNU NAIK</td>
+                " style="user-select: text;" *ngIf="userData.name != ''">{{userData.name}}</td>
+                <td data-label="
+                    Name
+                " style="user-select: text;" *ngIf="userData.name == ''">Null</td>
                                                                                 <td data-label="
                     Left Count
                 " style="user-select: text;">0</td>

@@ -301,123 +301,16 @@
                                                                     <th class="sorting" tabindex="0"
                                                                         aria-controls="tblCommissionLegder" rowspan="1"
                                                                         colspan="1"
-                                                                        aria-label="Total Income: activate to sort column ascending"
-                                                                        style="width: 90.4px; user-select: text;">Total
-                                                                        Income</th>
-                                                                    <th class="sorting" tabindex="0"
-                                                                        aria-controls="tblCommissionLegder" rowspan="1"
-                                                                        colspan="1"
                                                                         aria-label="Total Deduction: activate to sort column ascending"
                                                                         style="width: 109.4px; user-select: text;">Total
                                                                         Deduction</th>
                                                                    
-                                                                    <th class="sorting" tabindex="0"
-                                                                        aria-controls="tblCommissionLegder" rowspan="1"
-                                                                        colspan="1"
-                                                                        aria-label="Statement: activate to sort column ascending"
-                                                                        style="width: 106.4px; user-select: text;">
-                                                                        Statement</th>
+                                                                   
                                                                 </tr>
                                                             </thead>
 
 
                                                             <tbody style="user-select: text;">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
                                                                 <tr role="row" class="odd" style="user-select: text;"  *ngFor="let user of commisiondata">
@@ -429,21 +322,15 @@
 
 
                                                                     <td data-label=" Company Payout No.(Remark)"
-                                                                        style="user-select: text;"> Payout No.{{user.id}}(
-                                                                        Against Direct &amp; Renewal Income)</td>
+                                                                        style="user-select: text;"> Payout No.{{user.id}}</td>
                                                                     <td data-label="Start Date"
-                                                                        style="user-select: text;">{{user.start_date}}</td>
+                                                                        style="user-select: text;">{{getDateBefore(user.dt)}}</td>
                                                                     <td data-label="End Date"
-                                                                        style="user-select: text;">{{user.end_date}}</td>
+                                                                        style="user-select: text;">{{user.dt}}</td>
                                                                     <td data-label="Total Income"
-                                                                        style="user-select: text;">₹ {{user.revenue}}</td>
-                                                                    <td data-label="Total Deduction"
-                                                                        style="user-select: text;">₹ {{user.diducted}}</td>
-                                                                    <td data-label="Statement"
-                                                                        style="user-select: text;"> <a
-                                                                            style="color: blue; user-select: text;"
-                                                                            onclick="location.href = '/MyCommission/CommissionInvoiceVoucher?iType=6&amp;dtCode=143'">View
-                                                                            Statement </a></td>
+                                                                        style="user-select: text;">₹ {{user.amount}}</td>
+                                                                    
+                                                                    
                                                                 </tr>
                                                             </tbody>
                                                             <tbody style="user-select: text;">
@@ -457,12 +344,7 @@
                                                                     <td style="padding-bottom: 16px; user-select: text;"
                                                                         data-label="Total Income" id="SetTDStyle"> ₹
                                                                         {{getSumOfAmount()}}</td>
-                                                                    <td style="padding-bottom: 16px; user-select: text;"
-                                                                        data-label="Total Deduction" id="SetTDStyle"> ₹
-                                                                        {{getSumOfDiuduction()}}</td>
-
-                                                                   
-                                                                    <td id="showTD" style="user-select: text;"></td>
+                                                                  
                                                                 </tr>
                                                             </tbody>
                                                         </table>

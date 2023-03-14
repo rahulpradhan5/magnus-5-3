@@ -22,9 +22,11 @@ export class MyDownlineComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    const uid = sessionStorage.getItem('firebaseUserId');
+    // const uid = 'ab00003';
+     const uid = sessionStorage.getItem('firebaseUserId');
     this.http.get('http://moneysagaconsultancy.com/api/api/totaluserdata?user_id='+uid)
     .subscribe((data:any) => {
+      console.log(data);
       this.totalLeftcount = data.total_details.leftdata.length;
       this.totalrightcount = data.total_details.rightdata.length;
       this.totalDataconleft = data.total_details.comfirm_leftcount;

@@ -558,7 +558,10 @@
         " class="sorting_1" style="user-select: text;">{{userData.id}}</td>
                                                                         <td data-label="
             Name
-        " style="user-select: text;">VISHNU NAIK</td>
+        " style="user-select: text;" *ngIf="userData.name !=''">{{userData.name}}</td>
+        <td data-label="
+            Name
+        " style="user-select: text;" *ngIf="userData.name ==''">Null</td>
                                                                         <td data-label="
             Joining Package
         " style="user-select: text;">Free Package ( 0.00 )</td>
@@ -587,9 +590,12 @@
                                                                     <td data-label="
         ID
     " class="sorting_1" style="user-select: text;">{{userData.id}}</td>
-                                                                    <td data-label="
-        Name
-    " style="user-select: text;">VISHNU NAIK</td>
+    <td data-label="
+    Name
+" style="user-select: text;" *ngIf="userData.name !=''">{{userData.name}}</td>
+<td data-label="
+    Name
+" style="user-select: text;" *ngIf="userData.name ==''">Null</td>
                                                                     <td data-label="
         Joining Package
     " style="user-select: text;">Free Package ( 0.00 )</td>

@@ -596,7 +596,7 @@ padding-left: 10px;">
                                                                 </div>
                                                                 <div class="col-xs-10 text-right">
                                                                     <div class="huge">
-                                                                        <h3 id="RenewalDate">21/08/2021</h3>
+                                                                        <h3 id="RenewalDate">{{startDate}}</h3>
                                                                     </div>
                                                                     <div>
                                                                         <h5>Subscription Date </h5>
@@ -626,7 +626,8 @@ padding-left: 10px;">
                                                                 </div>
                                                                 <div class="col-xs-10 text-right">
                                                                     <div class="huge">
-                                                                        <h3 id="RenewalExpDate">19/09/2021</h3>
+                                                                        <h3 id="RenewalExpDate" *ngIf="endDate != '0000-00-00'">{{endDate}}</h3>
+                                                                            <h3 id="RenewalExpDate" *ngIf="endDate == '0000-00-00'">{{endDate}}</h3>
                                                                     </div>
                                                                     <div>
                                                                         <h5>Subscription Expiry Date</h5>
@@ -711,10 +712,10 @@ padding-left: 10px;">
                                                                 </div>
                                                                 <div class="col-xs-10 text-right">
                                                                     <div class="huge">
-                                                                        <h3 id="CurrentRank">Current Rank - -</h3>
+                                                                        <h3 id="CurrentRank">Current Rank </h3>
                                                                     </div>
                                                                     <div>
-                                                                        <h5></h5>
+                                                                        <h5>{{rank}}</h5>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -832,7 +833,7 @@ padding-left: 10px;">
                                                         <div id="mCSB_4_container"
                                                             class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
                                                             style="position:relative; top:0; left:0;" dir="ltr">
-                                                            <b>0 Days 0 Hrs 0 Minutes </b>
+                                                            <b>{{remainingTime}} </b>
                                                         </div>
                                                     </div>
                                                     <div id="mCSB_4_scrollbar_vertical"
@@ -895,7 +896,6 @@ padding-left: 10px;">
                                                                                     <th>Status</th>
                                                                                     <th> ID</th>
                                                                                     <th>Name</th>
-                                                                                    <th>City</th>
                                                                                     <th>DOJ</th>
                                                                                 </tr>
                                                                             </thead>
@@ -909,9 +909,8 @@ padding-left: 10px;">
                                                                                             title="Confirm"></td>
                                                                                     <td data-label="ID">{{user.user_id}}
                                                                                     </td>
-                                                                                    <td data-label="Name">VISHNU
-                                                                                        NAIK</td>
-                                                                                    <td data-label="City">Ponda</td>
+                                                                                    <td data-label="Name" *ngIf=" user.name != ''">{{user.name}}</td>
+                                                                                    <td data-label="Name" *ngIf=" user.name == ''">Null</td>
                                                                                     <td data-label="DOJ">{{
                                                                                         user.created_at |
                                                                                         date:'dd/MM/yyyy hh:mm a' }}
@@ -1139,104 +1138,6 @@ padding-left: 10px;">
                                         <div class="sparkline12-list shadow-reset">
                                             <div class="sparkline12-hd">
                                                 <div class="main-sparkline16-hd">
-                                                    <h1>Leadership Qualifier Details</h1>
-                                                    <div class="sparkline12-outline-icon">
-                                                        <span class="sparkline12-collapse-link"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="sparkline12-list shadow-reset">
-                                                <div>
-                                                    <div class="datatable-dashv1-list custom-datatable-overright"
-                                                        id="ScrollableDiv">
-                                                        <style>
-                                                            #MyRoyaltyStatus_filter,
-                                                            #MyRoyaltyStatus_paginate,
-                                                            #MyRoyaltyStatus_info {
-                                                                display: none;
-                                                            }
-
-                                                            table.dataTable thead th {
-                                                                font-weight: 100;
-                                                            }
-
-                                                            .table>tbody>tr>td {
-                                                                text-align: center;
-                                                            }
-
-                                                            @media all and (max-width: 600px) {
-                                                                .table>tbody>tr>td {
-                                                                    text-align: right;
-                                                                }
-                                                            }
-                                                        </style>
-
-
-                                                        <div class="table-wrapper" id="ScrollableDiv">
-                                                            <table id="MyRoyaltyStatus"
-                                                                class="table table-striped table-bordered"
-                                                                cellspacing="0" width="100%">
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th>Status</th>
-                                                                        <th>Name</th>
-
-                                                                        <th>Required Left</th>
-                                                                        <th>Required Right</th>
-                                                                        <th>Actual Left</th>
-                                                                        <th>Actual Right</th>
-
-                                                                        <th>Pending Left</th>
-                                                                        <th>Pending Right</th>
-                                                                    </tr>
-
-                                                                </thead>
-                                                                <tbody>
-
-                                                                    <tr>
-                                                                        <td data-label="Status">
-                                                                            <img src="/Content/Images/icons/qualified.png"
-                                                                                class="stausImg" alt="Achieved"
-                                                                                title="Achieved">
-                                                                        </td>
-                                                                        <td data-label="Name">Leadership Bonus</td>
-
-                                                                        <td data-label="Required Left">2500.00</td>
-                                                                        <td data-label="Required Right">2500.00</td>
-                                                                        <td data-label="Actual Left">0.00</td>
-                                                                        <td data-label="Actual Right">0.00</td>
-
-                                                                        <td data-label="Remaining Left">0.00</td>
-                                                                        <td data-label="Remaining Right">0.00</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td data-label="Status">
-                                                                            <img src="/Content/Images/icons/qualified.png"
-                                                                                class="stausImg" alt="Achieved"
-                                                                                title="Achieved">
-                                                                        </td>
-                                                                        <td data-label="Name">CCM Bonus</td>
-
-                                                                        <td data-label="Required Left">5000.00</td>
-                                                                        <td data-label="Required Right">5000.00</td>
-                                                                        <td data-label="Actual Left">0.00</td>
-                                                                        <td data-label="Actual Right">0.00</td>
-
-                                                                        <td data-label="Remaining Left">0.00</td>
-                                                                        <td data-label="Remaining Right">0.00</td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="sparkline12-list shadow-reset">
-                                            <div class="sparkline12-hd">
-                                                <div class="main-sparkline16-hd">
                                                     <h1>My Team</h1>
                                                     <div class="sparkline12-outline-icon">
                                                         <span class="sparkline12-collapse-link"></span>
@@ -1260,7 +1161,7 @@ padding-left: 10px;">
                                                         <table style="width:100%">
                                                             <tbody>
                                                                 <tr>
-                                                                    <th>Self Details</th>
+                                                                    <th>Today Details</th>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>

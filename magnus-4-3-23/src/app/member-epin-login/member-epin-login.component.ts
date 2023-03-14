@@ -23,9 +23,11 @@ export class MemberEpinLoginComponent implements OnInit {
   packag:any;
   packages: any = '';
   user: any = '';
+  usdata:any = '';
 
   ngOnInit(): void {
-    const uid = sessionStorage.getItem('firebaseUserId');
+    // const uid = 'ab00003';
+      const uid = sessionStorage.getItem('firebaseUserId');
     this.myId = uid;
     this.http.get('http://moneysagaconsultancy.com/api/api/Package?user_id='+uid)
     .subscribe((data:any) => {
@@ -41,8 +43,10 @@ export class MemberEpinLoginComponent implements OnInit {
       this.revenue = data.revenue[0]['revenue'];
      }
      this.payments = data.payments;
+     console.log(this.payments);
 
      this.packag = data.package ;
+     this.usdata = data.users;
     })
   }
   givepackage(event: Event){
@@ -60,17 +64,29 @@ export class MemberEpinLoginComponent implements OnInit {
       return
     }
 
-    if(this.packages.package >= this.revenue){
+    
+    let myArray = this.packages.split(',');
+    if(Number(myArray[1]) >= this.revenue){
       alert('you have low balance');
+     
       return
     }
-    console.log(this.packages);
-    let myArray = this.packages.split(',');
-    this.http.get('http://moneysagaconsultancy.com/api/api/givePackage?user_id='+this.myId+'&guid='+this.user+'&package='+myArray[0]+'&amount='+myArray[1])
-    .subscribe((data:any) => {
-      alert(data.message);
-      console.log(data);
-    })
+    if(Number(myArray[1]) >= this.revenue-this.revenue*10/100){
+      alert('you have low balance');
+     
+      return
+    }
+    if(Number(myArray[1]) < this.revenue){
+    this.http.get('http://moneysagaconsultancy.com/api/api/givePackage?user_id='+this.myId+'&guid='+this.user+'&package='+myArray[0])
+    .subscribe( (data: any) => {
+      alert(data.data);
+    },
+    (error: any) => {
+      alert('Order placed successfully');
+      location.reload(); // refresh the page on error
+    }
+    )
+  }
    
   }
  

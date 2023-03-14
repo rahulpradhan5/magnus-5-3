@@ -644,11 +644,6 @@
                                                                             </th>
                                                                             <th class="sorting_disabled" rowspan="1"
                                                                                 colspan="1"
-                                                                                style="width: 124.4px; user-select: text;">
-                                                                                Current Status
-                                                                            </th>
-                                                                            <th class="sorting_disabled" rowspan="1"
-                                                                                colspan="1"
                                                                                 style="width: 200.4px; user-select: text;">
                                                                                 Date of latest renewal
                                                                             </th>
@@ -662,22 +657,22 @@
                 " style="user-select: text;">{{data.id}}</td>
                                                                             <td data-label="
                     Name
-                " style="user-select: text;">Rajesh Karekar</td>
+                " style="user-select: text;" *ngIf="data.name != ''">{{data.name}}</td>
+                <td data-label="
+                Name
+            " style="user-select: text;" *ngIf="data.name == ''">Null</td>
                                                                             <td data-label="
                     Position w.r.t Me
                 " style="user-select: text;">Left</td>
                                                                             <td data-label="
                     Date Of Joining
-                " style="user-select: text;">{{data.created_at}}</td>
+                " style="user-select: text;">{{data.start_date}}</td>
                                                                             <td data-label="
                     Date Of Upgradation
-                " style="user-select: text;">{{data.created_at}}</td>
-                                                                            <td data-label="
-                    Current Status
-                " style="user-select: text;">Inactive</td>
+                " style="user-select: text;">{{data.end_date}}</td>
                                                                             <td data-label="
                     Date of latest renewal
-                " style="user-select: text;">{{data.created_at}}</td>
+                " style="user-select: text;">{{data.start_date}}</td>
                                                                         </tr>
                                                                         <tr role="row" class="even"
                                                                             style="user-select: text;" *ngFor="let righdata of rightdata">
@@ -686,22 +681,22 @@
                 " style="user-select: text;">{{righdata.id}}</td>
                                                                             <td data-label="
                     Name
-                " style="user-select: text;">Jyotiraditya Bhagat</td>
+                " style="user-select: text;" *ngIf="righdata.name != ''">{{righdata.name}}</td>
+                <td data-label="
+                    Name
+                " style="user-select: text;" *ngIf="righdata.name == ''">Null</td>
                                                                             <td data-label="
                     Position w.r.t Me
                 " style="user-select: text;">right</td>
                                                                             <td data-label="
                     Date Of Joining
-                " style="user-select: text;">{{righdata.created_at}}</td>
+                " style="user-select: text;">{{righdata.start_date}}</td>
                                                                             <td data-label="
                     Date Of Upgradation
-                " style="user-select: text;">{{righdata.created_at}}</td>
-                                                                            <td data-label="
-                    Current Status
-                " style="user-select: text;">Inactive</td>
+                " style="user-select: text;">{{righdata.end_date}}</td>
                                                                             <td data-label="
                     Date of latest renewal
-                " style="user-select: text;">{{righdata.created_at}}</td>
+                " style="user-select: text;">{{righdata.start_date}}</td>
                                                                         </tr>
                                                                     </tbody>
                                                                 </table>
