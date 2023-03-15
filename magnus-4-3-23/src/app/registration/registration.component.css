@@ -43,7 +43,7 @@
     }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 914px) {
     .head {
         margin-top: -11%;
         line-height: 51px;
@@ -85,7 +85,7 @@
     }
 }
 
-@media only screen and (max-width: 1037px) {
+@media only screen and (max-width: 1023px) {
     .row {
         display: flex;
         flex-direction: column;
@@ -94,7 +94,7 @@
     }
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 914px) {
 
 
     .banner {
@@ -187,13 +187,14 @@ TV. */
     }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1048px) {
 
     .head {
         margin-top: -11%;
         line-height: 61px;
         width: 280px;
         font-size: 5vw;
+
     }
 }
 
@@ -215,5 +216,15 @@ TV. */
         line-height: 51px;
         width: 300px;
         font-size: 10vw;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1048px) {
+
+    .head {
+        margin-top: -11%;
+        line-height: 51px;
+        width: 300px;
+        font-size: 5vw;
     }
 }
