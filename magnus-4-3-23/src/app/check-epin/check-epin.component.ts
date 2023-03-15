@@ -40,21 +40,20 @@ export class CheckEpinComponent implements OnInit {
     }
     this.http.get('http://moneysagaconsultancy.com/api/api/getEpin?user_id='+this.uid)
     .subscribe((data:any) => {
-      if (data?.data?.[0]?.['epin']) {
+      if (data.data.length != 0) {
         this.mpin = data.data[0]['epin'];
       } else {
-        this.mpin = undefined;
+        this.mpin = 'undefined';
       }
-      
-      if(this.mpin == undefined){
-     
+      console.log(this.mpin);
+      if(this.mpin == 'undefined'){
         const docRef = this.firestore.collection('users').doc(this.uid).valueChanges();
         docRef.subscribe((doc: any) => {
           if (doc!='') {
             // retrieve the password from the document
-            this.email = doc.data().email;
+            this.email = doc.email;
             // verify the user's password
-
+            console.log(this.email);
             this.auths.signInWithEmailAndPassword(this.email, this.password)
               .then(userCredential => {
                 // password is correct
