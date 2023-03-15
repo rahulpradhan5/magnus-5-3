@@ -41,17 +41,10 @@ export class RegistrationComponent implements OnInit {
     auth.logout();
     fauth.user.subscribe(user => {
       this.myid = user?.uid;
-      if(this.myid){
-        this.items = this.fdb.collection('users').doc(this.myid).valueChanges();
-      this.items.subscribe((data:any) =>{
-      this.http.get<any>('http://moneysagaconsultancy.com/api/api/insert?user_id='+this.myid+'&name='+data.fullName+'&referal_id='+this.id+'&position='+this.branch).subscribe(response => {
-console.log(response);
-      })
-      })
-      
-
-
-    }})
+      if(this.myid != 'undefined'){
+       this. apicall(this.myid);
+    }}
+    )
 
 
   }
@@ -59,6 +52,14 @@ console.log(response);
   ngOnInit(): void {
   }
 
+  apicall(uid:any){
+    this.items = this.fdb.collection('users').doc(uid).valueChanges();
+    this.items.subscribe((data:any) =>{
+    this.http.get<any>('http://moneysagaconsultancy.com/api/api/insert?user_id='+this.myid+'&name='+data.fullName+'&referal_id='+this.id+'&position='+this.branch).subscribe(response => {
+console.log(response);
+    })
+    })
+  }
 
    register() {
 
