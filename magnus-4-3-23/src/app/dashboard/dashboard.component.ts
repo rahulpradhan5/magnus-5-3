@@ -42,6 +42,7 @@ export class DashboardComponent implements OnInit {
   minutes:any;
   seconds:any;
   remainingTime:any;
+  ladate:any;
   constructor(fauth: AngularFireAuth, rout: Router, public fas: AngularFirestore, private http: HttpClient, public ActiveRoute: ActivatedRoute) {
 
   }
@@ -51,7 +52,7 @@ export class DashboardComponent implements OnInit {
     const uid = sessionStorage.getItem('firebaseUserId');
     this.http.get('http://moneysagaconsultancy.com/api/api/totaluserdata?user_id=' + uid)
       .subscribe((data: any) => {
-        console.log(data.subcription[0]
+        console.log(data
           );
         this.userData = data.allusers;
         this.todayDataleftconfirmcount = data.today_data_left_count_confirm;
@@ -68,13 +69,14 @@ export class DashboardComponent implements OnInit {
         this.totalrightpv = data.total_right_pv;
         this.totalconfirmleftpv = data.total_confirm_left_pv;
         this.totalcomfirmrightpv = data.total_confirm_right_pv;
-        this.todayLeftcountPv = data.today_left_count_pv;
-        this.todayRightcountPv = data.today_right_count_pv;
+        this.todayLeftcountPv = data?.today_left_count_pv;
+        this.todayRightcountPv = data?.today_right_count_pv;
         this.ownPv = data.ownPv;
         this.todayownPv = data.TodayownPv;
-        this.startDate = data.subcription[0].start_date;
-        this.endDate = data.subcription[0].end_date;
+        this.startDate = data.subcription.start_date;
+        this.endDate = data.subcription.end_date;
         this.rank = data.rank;
+        this.ladate = data.ldate;
         if(this.endDate != '' && this.endDate !='0000-00-00'){
           setInterval(() => {
             this.remainingTime = this.updateRemainingTime() ;
@@ -82,8 +84,16 @@ export class DashboardComponent implements OnInit {
         }else{
           this.remainingTime = 'Life Time'
         }
-        this.totalLeftcount = data.total_details.leftdata.length;
-        this.totalrightcount = data.total_details.rightdata.length;
+        if (data.total_details['leftdata'] != 'undefined') {
+          this.totalLeftcount = data.total_details.leftdata.length;
+        }else{
+          this.totalLeftcount = 0;
+        }
+        if( data?.total_details['rightdata'] != 'undefined'){
+          this.totalrightcount = data.total_details.rightdata.length;
+        } else {
+          this.totalrightcount = 0;
+        }
         
         
         // Convert the time difference to days, hours, minutes, and seconds
