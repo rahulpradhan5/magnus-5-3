@@ -215,14 +215,15 @@
                                                                 <tbody>
                                                                     <ng-container *ngFor="let data of pairincome" >
                                                                     <tr class="odd" *ngIf="data.revenue != 0">
-                                                                        <td valign="top" colspan="5"
-                                                                            class="dataTables_empty">{{data.id}}</td>
-                                                                            <td valign="top" colspan="5"
-                                                                            class="dataTables_empty">{{data.revenue}}</td>
-                                                                            <td valign="top" colspan="5"
-                                                                            class="dataTables_empty">{{data.side}} 12%</td>
-                                                                            <td valign="top" colspan="5"
-                                                                            class="dataTables_empty">{{data.created_at}} %</td>
+                                                                       
+                                                                       <td data-label="Start Date"
+                                                                        style="user-select: text;">{{data.id}}</td>
+                                                                           <td data-label="Start Date"
+                                                                        style="user-select: text;">{{data.revenue}}</td>
+                                                                           <td data-label="Start Date"
+                                                                        style="user-select: text;">{{data.side}} 12%</td>
+                                                                           <td data-label="Start Date"
+                                                                        style="user-select: text;">{{data.created_at}} </td>
                                                                     </tr>
                                                                     
                                                                 </ng-container>

@@ -43,8 +43,20 @@ export class DashboardComponent implements OnInit {
   seconds:any;
   remainingTime:any;
   ladate:any;
-  constructor(fauth: AngularFireAuth, rout: Router, public fas: AngularFirestore, private http: HttpClient, public ActiveRoute: ActivatedRoute) {
+  uid?: string;
+  email?: any;
+  date?: string;
+  constructor(fauth: AngularFireAuth, rout: Router, public fas: AngularFirestore, private http: HttpClient, public ActiveRoute: ActivatedRoute, public afa: AngularFireAuth) {
+    afa.user.subscribe(data => {
+      // console.log('data-->');
+      // console.log(data);
+      this.email = data?.email;
 
+      this.uid = data?.uid;
+      this.date =new Date().getDate()+ "/"+new Date().getMonth()+ "/"+new Date().getFullYear()+ "  "+ new Date().getHours()+ ":" + new Date().getMinutes() + ":" + new Date().getSeconds()
+      // let NewTime = hour + ":" + minuts + ":" + seconds
+      console.log('<--data-->'); console.log(this.date); console.log('<--data-->');
+    })
   }
 
   ngOnInit(): void {
